@@ -1,122 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>For You ❤️</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      color: #fff;
-      text-align: center;
-      overflow-x: hidden;
-    }
-    h1 {
-      margin-top: 60px;
-      font-size: 3rem;
-    }
-    .card {
-      background: rgba(255,255,255,0.15);
-      margin: 30px auto;
-      padding: 25px;
-      border-radius: 20px;
-      width: 90%;
-      max-width: 600px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      animation: fadeIn 2s ease;
-    }
-    button {
-      background: #ff4f81;
-      border: none;
-      padding: 15px 25px;
-      font-size: 1rem;
-      border-radius: 30px;
-      color: #fff;
-      cursor: pointer;
-      margin-top: 15px;
-    }
-    button:hover {
-      background: #ff2f6d;
-    }
-    .hidden {
-      display: none;
-    }
-    .heart {
-      position: fixed;
-      color: #ff2f6d;
-      animation: float 6s linear infinite;
-      font-size: 24px;
-    }
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-    @keyframes float {
-      0% {bottom: -10%; opacity: 0;}
-      50% {opacity: 1;}
-      100% {bottom: 110%; opacity: 0;}
-    }
-  </style>
+<meta charset="UTF-8">
+<title>For Sanika 🧸💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ffd1dc, #fff0f5);
+  text-align: center;
+  overflow-x: hidden;
+  color: #444;
+}
+
+h1 {
+  margin-top: 50px;
+  font-size: 3rem;
+  color: #ff5fa2;
+}
+
+.card {
+  background: white;
+  border-radius: 25px;
+  padding: 25px;
+  width: 90%;
+  max-width: 650px;
+  margin: 30px auto;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  animation: fadeIn 1.5s ease;
+}
+
+button {
+  background: #ff8cc6;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  color: white;
+  margin-top: 15px;
+}
+
+button:hover {
+  background: #ff5fa2;
+}
+
+.hidden {
+  display: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+td {
+  padding: 15px;
+  font-size: 1.2rem;
+}
+
+.teddy {
+  position: fixed;
+  bottom: 0;
+  font-size: 40px;
+  animation: walk 12s linear infinite;
+}
+
+@keyframes walk {
+  0% { left: -10%; }
+  100% { left: 110%; }
+}
+
+.heart {
+  position: fixed;
+  font-size: 24px;
+  animation: float 6s linear infinite;
+}
+
+@keyframes float {
+  0% { bottom: -10%; opacity: 0; }
+  50% { opacity: 1; }
+  100% { bottom: 110%; opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
 </head>
-<body>
 
-<h1>Hey Love ❤️</h1>
+<body onclick="playMusic()">
+
+<h1>Hi Sanika 🧸💖</h1>
 
 <div class="card">
   <p>
-    If you’re reading this, just know that  
-    **someone is smiling right now thinking about you.**
+    This little page is made with lots of smiles,  
+    warm hugs, and one heart that beats just for you 💕
   </p>
   <p>
-    You make my days brighter, my heart lighter,  
-    and my life more beautiful just by being you.
+    — from Shreyas 🫶
   </p>
 </div>
 
 <div class="card">
-  <h2>Tap for a Surprise 🎁</h2>
-  <button onclick="showMessage()">Open Surprise</button>
-  <p id="surprise" class="hidden">
-    🌸 You are my favorite notification  
-    🌸 My safe place  
-    🌸 And my forever person  
-    <br><br>
-    I’m really lucky to have you ❤️
+  <h2>🎁 Cute Surprise Table</h2>
+  <table>
+    <tr>
+      <td>🧸 Teddy Hug</td>
+      <td>Just for you 🤗</td>
+    </tr>
+    <tr>
+      <td>🐰 Bunny Smile</td>
+      <td>Because you’re adorable 😄</td>
+    </tr>
+    <tr>
+      <td>🐼 Panda Love</td>
+      <td>Unlimited cuddles 🖤</td>
+    </tr>
+    <tr>
+      <td>🐻 Bear Promise</td>
+      <td>I’ll always be here 💖</td>
+    </tr>
+  </table>
+</div>
+
+<div class="card">
+  <h2>💌 Tap for a Sweet Message</h2>
+  <button onclick="showMsg()">Open</button>
+  <p id="msg" class="hidden">
+    Sanika, you are my comfort person,  
+    my favorite smile,  
+    and the cutest part of my day 🥹💗  
   </p>
 </div>
 
 <div class="card">
-  <h2>One More Thing… 💌</h2>
+  <h2>🌸 One Last Surprise</h2>
   <button onclick="showLove()">Click Here</button>
   <p id="love" class="hidden">
-    No matter where life takes us,  
-    just know that **my heart chose you**  
-    and it keeps choosing you… every single day 💖
+    No matter how busy life gets,  
+    just remember…  
+    someone named Shreyas  
+    cares about you a lot 🧸❤️
   </p>
 </div>
 
-<script>
-  function showMessage() {
-    document.getElementById("surprise").style.display = "block";
-  }
-  function showLove() {
-    document.getElementById("love").style.display = "block";
-  }
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
 
-  function createHeart() {
-    const heart = document.createElement("div");
-    heart.className = "heart";
-    heart.innerHTML = "❤️";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = Math.random() * 20 + 20 + "px";
-    document.body.appendChild(heart);
-    setTimeout(() => heart.remove(), 6000);
-  }
-  setInterval(createHeart, 500);
+<script>
+function showMsg() {
+  document.getElementById("msg").style.display = "block";
+}
+
+function showLove() {
+  document.getElementById("love").style.display = "block";
+}
+
+function playMusic() {
+  document.getElementById("bgMusic").play();
+}
+
+// Floating hearts
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "💖";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = Math.random() * 20 + 20 + "px";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 6000);
+}
+setInterval(createHeart, 400);
+
+// Walking teddies
+const animals = ["🧸","🐻","🐼","🐰"];
+setInterval(() => {
+  const t = document.createElement("div");
+  t.className = "teddy";
+  t.innerHTML = animals[Math.floor(Math.random() * animals.length)];
+  t.style.left = "-10%";
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 12000);
+}, 3000);
 </script>
 
 </body>
 </html>
-<!-- trigger github pages deploy -->
